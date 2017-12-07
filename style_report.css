@@ -49,10 +49,16 @@ body {
         top: 1px;
         list-style-type: none;
     }
-
+#btnContainer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 .buttons {
     position: relative;
     text-align: center;
+    color: aliceblue;
+    background-color: #212529;
 }
 
 .buttonlist {
@@ -84,7 +90,7 @@ h1 {
     background-position: 0 0;
     font-size: 70px;
     font-family: 'Verdana';
-    color: transparent;
+    color: hotpink;
     -webkit-font-smoothing: antialiased;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -136,4 +142,26 @@ h1 {
     to {
         background-position: 100% 0
     }
+}
+
+#mainColumn {
+    float: left;
+    width: 50%;
+    padding-left: 20% 
+}
+
+#mainColumn li{
+    font-weight: bold;
+}
+#sideColumn {
+    padding-right: 20%;
+}
+#formerino {
+    border-style: solid;
+    background-color: beige;
+}
+#formerino:after{
+    content: "";
+    display:table;
+    clear: both;
 }
