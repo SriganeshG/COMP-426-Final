@@ -1,0 +1,57 @@
+body{
+
+}
+.container-fluid{
+  
+}
+
+.temp{
+ height:700px;   
+}
+.banner{
+ text-align: center;   
+}
+.grid{
+   float:left;
+    height: 120px;
+    width: 120px;
+}
+.breakGrid{
+ clear:left;
+}
+.innerGrid{
+   float:left;
+    height: 40px;
+    width: 40px;
+}
+.innerBreakGrid{
+ clear:left;
+}
+#map{
+   min-width: 630px;
+}
+#topArrow{
+ position: absolute;
+    left:455px;
+}
+#leftArrow{
+ position: absolute;
+    left:405px;
+    top:45px;
+}
+#rightArrow{
+ position: absolute;
+    left:505px;
+    top:45px;
+}
+#bottomArrow{
+ position: absolute;
+    left:455px;
+    top: 90px;
+}
+.modal-backdrop{
+    background-image: url("../media/background.jpg");
+}
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 1;
+}
