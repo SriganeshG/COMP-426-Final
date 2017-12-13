@@ -107,7 +107,7 @@ function ShowTickets() {
     });
     document.getElementById("display").innerHTML +=
         "<br><input type='submit' value='Apply Filter' onclick='ShowFilterTicket()'>";
-    document.getElementById("display").innerHTML += "<br><input type='submit' value='Show All' onclick='ShowAllTicket()'>"
+    document.getElementById("display").innerHTML += "<input type='submit' value='Show All' onclick='ShowAllTicket()'>"
 
 }
 
