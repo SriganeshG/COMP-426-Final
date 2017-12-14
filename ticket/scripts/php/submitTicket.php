@@ -7,7 +7,8 @@ $category = $db -> quote($_POST['category']);
 $priority = $db -> quote($_POST['priority']);
 $description = $db -> quote($_POST['description']);
 $department = $db -> quote($_POST['department']);
-$result = $db -> query("INSERT INTO tickets (name,category,priority,subject,description,department) VALUES (" . $userName . "," . $category . "," . $priority . "," . $subject . "," . $description . "," . $department . ")");
+$dd = $db -> quote($_POST['dd1']);
+$result = $db -> query("INSERT INTO tickets (name,category,priority,subject,description,department,DueDate) VALUES (" . $userName . "," . $category . "," . $priority . "," . $subject . "," . $description . "," . $department . "," . $dd . ")");
  $db -> close();
 echo json_encode("1");
 ?>

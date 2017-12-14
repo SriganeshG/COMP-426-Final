@@ -1,87 +1,155 @@
 <html>
-
 <head>
-    <title>Ticket Desk</title>
+<title>Ticket Desk</title>
 </head>
 <link rel="stylesheet" href="lib/bootstrap.min.css">
 <link rel="stylesheet" href="lib/style.css">
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
 
-<style>
-    h1,
-    h2 {
-        font-family: 'Oswald', semi-bold, sans-serif;
-    }
-
-    div {
-        font-family: 'Crimson Text', serif;
-    }
-
-</style>
 <script type="application/javascript" src="lib/jquery-1.11.2.min.js"></script>
 <script type="application/javascript" src="lib/bootstrap.min.js"></script>
 <script type="application/javascript" src="scripts/js/includes.js"></script>
 
 
-<!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Ticket Desk</h4>
-            </div>
-            <div class="modal-body">
-                <div id="registerBox">
+<style>
+      div.container {
+       margin: 70px;
+       background-color: #ffffff;
+        border: 20px solid black;
+       
+      font-family: 'Crimson Text', serif, 35px;
+      color: #2B2B2B;
+      }
+    
+      header {
+        background-image: url("http://blog.hostbaby.com/wp-content/uploads/2013/07/scuffedstatic_red_1920x1234.jpg");
+    background-attachment: fixed;
 
+      } 
+      body {
+              background-image: url("http://blog.hostbaby.com/wp-content/uploads/2013/07/scuffedstatic_red_1920x1234.jpg");
+    background-attachment: fixed;
+ font-family: 'Oswald';  
+              } 
+
+      .btn-custom {
+
+  background-color: hsl(0, 26%, 22%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#864f4f", endColorstr="#462929");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#864f4f), to(#462929));
+  background-image: -moz-linear-gradient(top, #864f4f, #462929);
+  background-image: -ms-linear-gradient(top, #864f4f, #462929);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #864f4f), color-stop(100%, #462929));
+  background-image: -webkit-linear-gradient(top, #864f4f, #462929);
+  background-image: -o-linear-gradient(top, #864f4f, #462929);
+  background-image: linear-gradient(#864f4f, #462929);
+  border-color: #462929 #462929 hsl(0, 26%, 17%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+
+      h1 {
+      letter-spacing: 3px;
+      font-family: 'Oswald', semi-bold, sans-serif;  
+      color: #2B2B2B;
+      }
+
+       h3 {
+      font-family: 'Oswald', semi-bold, sans-serif;  
+      color: #2B2B2B;
+      }
+        
+    </style>
+
+
+
+
+    <!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Ticket Desk</h4>
+      </div>
+      <div class="modal-body">
+           <div id="registerBox">
+    
+    </div>
+  </div></div>
+      </div></div>
+      
+
+
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li><button class="btn navbar-btn btn-custom" onclick="NewTicket()">Create New Ticket</button></li>
+      <li> <button class="btn navbar-btn btn-custom" onclick="ShowTickets()">View Tickets</button></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><button type="button" class="btn navbar-btn btn-custom" onclick="logout()">Logout/Login</button></li>
+    </ul>
+  </div>
+</nav>
+
+
+<header>
+  <br> <br>
+
+    <!-- Intro Section -->
+      <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style=");">
+        <div class="full-bg-img">
+            <div class="container flex-center">
+                <div class="row pt-5 mt-3">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h1 class="h1-reponsive white-text font-up font-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Welcome to TicketDesk!</strong></h1>
+              
+                            <h3 class="font-up mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>[Now get to work.]</strong></h3>
+                            <br>
+                           
+                            
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
+</header>
 
-<body>
-    <h1 class="text-center">Welcome to TicketDesk!</h1>
-    <h2 class="text-center">[Now get to work.]</h2>
-
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-md-11 column">
-                <br>
-                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="NewTicket()">Create New Ticket</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="ShowTickets()">View Tickets</button>
-            </div>
-            <div class="col-md-1 column">
-                <br>
-                <input type="button" onclick="logout()" value="Logout"><br>
-            </div>
-
-        </div>
-        <br><br>
-        <div class="row clearfix">
-            <div class="col-md-12 column">
-                <div id="display"></div>
-            </div>
-
+<div class="container"> 
+    <br><br>
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div id="display"></div>
         </div>
 
     </div>
-</body>
 
-</html>
+</div>
+    </body>
+    </html>
+
 
 <script type="application/javascript">
-    userName = "";
+   userName = "";
     checkSession();
-
-
-
-    $('#loginModal').modal({
-        backdrop: 'static',
-        keyboard: false,
-        show: false
-    })
+   
+   
+    
+$('#loginModal').modal({
+  backdrop: 'static',
+  keyboard: false,
+  show: false
+})
 
 </script>
